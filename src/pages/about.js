@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 
-// pages in gatsby must be a default export to get picked up
 export default function AboutPage() {
   return (
     <main>
       <h1>About this site</h1>
+      <Link to="/">Go Home</Link>
     </main>
   );
 }
