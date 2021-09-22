@@ -6,9 +6,9 @@ import Layout from './layout';
 export default function PostLayout({ children, pageContext }) {
   const { title, description } = pageContext.frontmatter;
   return (
-    <Layout>
+    <Layout title={title} description={description}>
       {children}
-      <Link to="/">&larr; back</Link>
+      <Link to="/"> 🛸 back</Link>
     </Layout>
   );
 }

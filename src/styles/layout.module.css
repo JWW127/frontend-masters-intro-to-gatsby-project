@@ -1,25 +1,31 @@
 .header {
-    background-color: var(--black);
-    color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 .header a {
-    color: inherit;
-    display: inline-block;
-    padding: 0.5rem;
-    text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
 }
 
 .header a:focus,
 .header a:hover {
-    background: var(--white);
-    color: var(--black)
+  background: var(--white);
+  color: var(--black);
+}
+
+li {
+  list-style-type: none;
 }
 
 .content {
-    margin: 3rem auto;
-    max-width: 54ch;
+  text-align: center;
+  text-decoration: none;
+  margin: 3rem auto;
+  max-width: 54ch;
 }

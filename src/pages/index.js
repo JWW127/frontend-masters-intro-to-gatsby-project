@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout.js';
+
+import { imageWrapper } from '../styles/index.module.css';
 // pages in gatsby must be a default export to get picked up
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
@@ -23,10 +26,18 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <h1>Hello Friend</h1>
-      <Link to="/about">About</Link>
+      <div className={imageWrapper}>
+        <StaticImage
+          src="../images/cocktail.jpg"
+          alt="its flowers and a cocktail on a table"
+          placeholder="dominantColor"
+          width={300}
+          height={300}
+        />
+      </div>
+      <h1>🔮Hello Friend🔮</h1>
 
-      <h2>Check out recent blog posts</h2>
+      <h2>Recent Blog Post</h2>
       <ul>
         {posts.map((post) => {
           return (
