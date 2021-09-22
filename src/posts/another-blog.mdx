@@ -4,6 +4,24 @@ title: Another Blog Post
 description: This is my Second MDX blog post.
 ---
 
-# oh Dang
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+export const query = graphql`
+  query SmashburgerQuery {
+    file(name: { eq: "smashburger" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: DOMINANT_COLOR)
+      }
+    }
+  }
+`;
+
+# Oh Dang
+
+<GatsbyImage
+  image={getImage(props.data.file)}
+  alt="a smashburger on a plate with french fries in the foreground"
+/>
 
 This blog is even better than the last one.
